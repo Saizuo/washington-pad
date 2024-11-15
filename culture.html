@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culture - The Washington Pad</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/culture.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="masthead">
+            <div class="logo-container">
+                <h1 class="logo">The Washington<span> Pad</span></h1>
+            </div>
+            <div class="header-right">
+                <div class="weather">
+                    <i class="fas fa-sun" id="weather-icon"></i>
+                    <span id="weather-text">Loading weather...</span>
+                </div>
+                <button class="subscribe-btn">Subscribe Now</button>
+            </div>
+        </div>
+        <nav>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="politics.html">Politics</a>
+                <a href="technology.html">Technology</a>
+                <a href="business.html">Business</a>
+                <a href="culture.html" class="active">Culture</a>
+                <a href="opinion.html">Opinion</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="culture-wrapper">
+            <section class="culture-hero">
+                <div class="hero-feature">
+                    <img src="https://picsum.photos/1200/600" alt="Cultural Event">
+                    <div class="hero-overlay">
+                        <span class="culture-tag">Arts</span>
+                        <h1>Metropolitan Museum Unveils Revolutionary Digital Art Exhibition</h1>
+                        <p>Virtual reality meets classical art in groundbreaking showcase</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="culture-grid">
+                <div class="featured-reviews">
+                    <h2>Featured Reviews</h2>
+                    <div class="review-grid">
+                        <article class="review-card">
+                            <div class="review-header">
+                                <span class="category">Theater</span>
+                                <div class="rating">★★★★★</div>
+                            </div>
+                            <h3>"Hamilton" Returns with Innovative Stage Design</h3>
+                            <p>Broadway's beloved musical reinvents itself for the digital age</p>
+                            <span class="reviewer">By Emma Thompson</span>
+                        </article>
+                        <article class="review-card">
+                            <div class="review-header">
+                                <span class="category">Film</span>
+                                <div class="rating">★★★★☆</div>
+                            </div>
+                            <h3>"The Last Horizon" Pushes Cinematic Boundaries</h3>
+                            <p>Sci-fi epic combines stunning visuals with deep storytelling</p>
+                            <span class="reviewer">By Michael Chen</span>
+                        </article>
+                    </div>
+                </div>
+
+                <aside class="events-sidebar">
+                    <h3>Upcoming Events</h3>
+                    <div class="event-list">
+                        <div class="event-card">
+                            <div class="date">
+                                <span class="day">15</span>
+                                <span class="month">MAR</span>
+                            </div>
+                            <div class="event-details">
+                                <h4>Jazz in the Park</h4>
+                                <p>Central Park, 7 PM</p>
+                            </div>
+                        </div>
+                        <div class="event-card">
+                            <div class="date">
+                                <span class="day">18</span>
+                                <span class="month">MAR</span>
+                            </div>
+                            <div class="event-details">
+                                <h4>Modern Art Exhibition</h4>
+                                <p>National Gallery, 10 AM</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About ThePad</h4>
+                <p>Your window to the world of arts and culture.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Culture Categories</h4>
+                <a href="#">Arts</a>
+                <a href="#">Theater</a>
+                <a href="#">Music</a>
+                <a href="#">Film</a>
+            </div>
+            <div class="footer-section">
+                <h4>Subscribe</h4>
+                <a href="#">Culture Newsletter</a>
+                <a href="#">Event Updates</a>
+                <a href="#">Reviews Digest</a>
+                <a href="#">Artist Profiles</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 ThePad. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function calculateDailyTemp() {
+            const date = new Date();
+            const hour = date.getHours();
+            const baseTemp = 75;
+            const hourlyVariation = Math.sin((hour - 12) / 24 * Math.PI) * 8;
+            const randomVariation = Math.random() * 2 - 1;
+            return Math.round(baseTemp + hourlyVariation + randomVariation);
+        }
+
+        function updateWeather() {
+            const temp = calculateDailyTemp();
+            const weatherText = document.getElementById('weather-text');
+            const weatherIcon = document.getElementById('weather-icon');
+            
+            weatherText.textContent = `${temp}°F Washington, DC`;
+            
+            const hour = new Date().getHours();
+            weatherIcon.className = (hour >= 6 && hour < 18) ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        updateWeather();
+        setInterval(updateWeather, 60000);
+    </script>
+</body>
+</html>

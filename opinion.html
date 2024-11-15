@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opinion - The Washington Pad</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/opinion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="masthead">
+            <div class="logo-container">
+                <h1 class="logo">The Washington<span> Pad</span></h1>
+            </div>
+            <div class="header-right">
+                <div class="weather">
+                    <i class="fas fa-sun" id="weather-icon"></i>
+                    <span id="weather-text">Loading weather...</span>
+                </div>
+                <button class="subscribe-btn">Subscribe Now</button>
+            </div>
+        </div>
+        <nav>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="politics.html">Politics</a>
+                <a href="technology.html">Technology</a>
+                <a href="business.html">Business</a>
+                <a href="culture.html">Culture</a>
+                <a href="opinion.html" class="active">Opinion</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="opinion-container">
+            <section class="featured-opinion">
+                <article class="main-opinion">
+                    <div class="author-profile">
+                        <img src="https://picsum.photos/150/150" alt="Author">
+                        <div class="author-info">
+                            <h3>Dr. James Wilson</h3>
+                            <span>Senior Political Analyst</span>
+                        </div>
+                    </div>
+                    <div class="opinion-content">
+                        <h1>The Digital Revolution's Impact on Democracy</h1>
+                        <p class="lead">How social media and AI are reshaping political discourse</p>
+                        <div class="meta">Published 2 hours ago</div>
+                    </div>
+                </article>
+            </section>
+
+            <section class="opinion-grid">
+                <div class="columnists">
+                    <h2>Featured Columnists</h2>
+                    <div class="columnist-cards">
+                        <article class="columnist-card">
+                            <img src="https://picsum.photos/100/100" alt="Columnist">
+                            <div class="columnist-info">
+                                <h3>Sarah Chen</h3>
+                                <span>Technology Ethics</span>
+                                <p>"The AI Ethics Dilemma We Can't Ignore"</p>
+                            </div>
+                        </article>
+                        <article class="columnist-card">
+                            <img src="https://picsum.photos/101/101" alt="Columnist">
+                            <div class="columnist-info">
+                                <h3>Robert Martinez</h3>
+                                <span>Economic Policy</span>
+                                <p>"Rethinking Global Trade in the Digital Age"</p>
+                            </div>
+                        </article>
+                        <article class="columnist-card">
+                            <img src="https://picsum.photos/102/102" alt="Columnist">
+                            <div class="columnist-info">
+                                <h3>Emma Thompson</h3>
+                                <span>Cultural Commentary</span>
+                                <p>"The Evolution of Digital Entertainment"</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About ThePad</h4>
+                <p>Where thought leaders shape the conversation.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Opinion Categories</h4>
+                <a href="#">Politics</a>
+                <a href="#">Technology</a>
+                <a href="#">Culture</a>
+                <a href="#">Economics</a>
+            </div>
+            <div class="footer-section">
+                <h4>Subscribe</h4>
+                <a href="#">Opinion Newsletter</a>
+                <a href="#">Columnist Updates</a>
+                <a href="#">Featured Voices</a>
+                <a href="#">Reader Submissions</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 ThePad. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function calculateDailyTemp() {
+            const date = new Date();
+            const hour = date.getHours();
+            const baseTemp = 75;
+            const hourlyVariation = Math.sin((hour - 12) / 24 * Math.PI) * 8;
+            const randomVariation = Math.random() * 2 - 1;
+            return Math.round(baseTemp + hourlyVariation + randomVariation);
+        }
+
+        function updateWeather() {
+            const temp = calculateDailyTemp();
+            const weatherText = document.getElementById('weather-text');
+            const weatherIcon = document.getElementById('weather-icon');
+            
+            weatherText.textContent = `${temp}°F Washington, DC`;
+            
+            const hour = new Date().getHours();
+            weatherIcon.className = (hour >= 6 && hour < 18) ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        updateWeather();
+        setInterval(updateWeather, 60000);
+    </script>
+</body>
+</html>

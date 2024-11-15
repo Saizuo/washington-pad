@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology - The Washington Pad</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/technology.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="masthead">
+            <div class="logo-container">
+                <h1 class="logo">The Washington<span> Pad</span></h1>
+            </div>
+            <div class="header-right">
+                <div class="weather">
+                    <i class="fas fa-sun" id="weather-icon"></i>
+                    <span id="weather-text">Loading weather...</span>
+                </div>
+                <button class="subscribe-btn">Subscribe Now</button>
+            </div>
+        </div>
+        <nav>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="politics.html">Politics</a>
+                <a href="technology.html">Technology</a>
+                <a href="business.html">Business</a>
+                <a href="culture.html">Culture</a>
+                <a href="opinion.html">Opinion</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tech-showcase">
+            <section class="tech-hero">
+                <div class="tech-feature">
+                    <img src="https://picsum.photos/1200/600" alt="AI Technology">
+                    <div class="tech-overlay">
+                        <span class="tech-tag">Innovation</span>
+                        <h1>Quantum Computing Breakthrough: New Chip Sets Processing Record</h1>
+                        <p class="lead">Scientists achieve quantum supremacy with revolutionary new processor design</p>
+                        <div class="meta">
+                            <span class="author">By Michael Chen</span>
+                            <span class="time">Updated 30 minutes ago</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tech-grid">
+                <div class="tech-news-column">
+                    <h2>Latest in Tech</h2>
+                    <div class="tech-news-grid">
+                        <article class="tech-card">
+                            <img src="https://picsum.photos/400/300" alt="AI News">
+                            <div class="card-content">
+                                <span class="tag">Artificial Intelligence</span>
+                                <h3>AI Model Achieves Human-Level Performance in Medical Diagnosis</h3>
+                                <p>New neural network shows promising results in early disease detection</p>
+                                <div class="meta">
+                                    <span class="time">2 hours ago</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="tech-card">
+                            <img src="https://picsum.photos/401/300" alt="Space Tech">
+                            <div class="card-content">
+                                <span class="tag">Space Technology</span>
+                                <h3>SpaceX Announces New Mars Mission Timeline</h3>
+                                <p>Revolutionary propulsion system could cut travel time to Mars in half</p>
+                                <div class="meta">
+                                    <span class="time">4 hours ago</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <aside class="tech-sidebar">
+                    <div class="product-reviews">
+                        <h3>Latest Reviews</h3>
+                        <div class="review-card">
+                            <div class="rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="score">9.5/10</span>
+                            </div>
+                            <h4>iPhone 15 Pro Max</h4>
+                            <p>Setting new standards in mobile photography</p>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="score">8.5/10</span>
+                            </div>
+                            <h4>Samsung Galaxy S24 Ultra</h4>
+                            <p>AI features shine in latest flagship</p>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About ThePad</h4>
+                <p>Your source for cutting-edge technology news and analysis.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Tech Categories</h4>
+                <a href="#">AI & Machine Learning</a>
+                <a href="#">Cybersecurity</a>
+                <a href="#">Space Tech</a>
+                <a href="#">Reviews</a>
+            </div>
+            <div class="footer-section">
+                <h4>Subscribe</h4>
+                <a href="#">Tech Newsletter</a>
+                <a href="#">Digital Access</a>
+                <a href="#">App</a>
+                <a href="#">Podcast</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 ThePad. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function calculateDailyTemp() {
+            const date = new Date();
+            const hour = date.getHours();
+            const baseTemp = 75;
+            const hourlyVariation = Math.sin((hour - 12) / 24 * Math.PI) * 8;
+            const randomVariation = Math.random() * 2 - 1;
+            return Math.round(baseTemp + hourlyVariation + randomVariation);
+        }
+
+        function updateWeather() {
+            const temp = calculateDailyTemp();
+            const weatherText = document.getElementById('weather-text');
+            const weatherIcon = document.getElementById('weather-icon');
+            
+            weatherText.textContent = `${temp}°F Washington, DC`;
+            
+            const hour = new Date().getHours();
+            weatherIcon.className = (hour >= 6 && hour < 18) ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        updateWeather();
+        setInterval(updateWeather, 60000);
+    </script>
+</body>
+</html>

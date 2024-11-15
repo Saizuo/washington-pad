@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Washington Pad - Digital News</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="masthead">
+            <div class="logo-container">
+                <h1 class="logo">The Washington<span> Pad</span></h1>
+            </div>
+            <div class="header-right">
+                <div class="weather">
+                    <i class="fas fa-sun" id="weather-icon"></i>
+                    <span id="weather-text">Loading weather...</span>
+                </div>
+                <button class="subscribe-btn">Subscribe Now</button>
+            </div>
+        </div>
+        <nav>
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="politics.html">Politics</a>
+                <a href="#">Technology</a>
+                <a href="#">Business</a>
+                <a href="#">Culture</a>
+                <a href="#">Opinion</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="breaking-news">
+            <div class="breaking-banner">
+                <span class="breaking-label">BREAKING</span>
+                <a href="antelope-story.html">
+                    <p>6 Month Pet Antelope "Buggy" Shot Dead By Virginia Sheriff Office</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="featured">
+            <div class="main-story">
+                <a href="antelope-story.html">
+                    <img src="home.png" alt="Main story">
+                    <div class="story-overlay">
+                        <span class="category-tag">Local News</span>
+                        <h2>Breaking: 6 Month Pet Antelope "Buggy" Shot Dead By Virginia Sheriff Office</h2>
+                        <div class="story-meta">
+                            <span class="author">By John Smith</span>
+                            <span class="timestamp">2 hours ago</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <div class="content-grid">
+            <section class="trending">
+                <div class="section-header">
+                    <h3>Trending Now</h3>
+                </div>
+                <div class="trending-grid">
+                    <article class="trending-card">
+                        <span class="number">01</span>
+                        <div class="trending-content">
+                            <h4>Market Report: Tech Stocks Surge to Record Heights</h4>
+                            <p>Wall Street sees unprecedented gains in technology sector</p>
+                        </div>
+                    </article>
+                    <article class="trending-card">
+                        <span class="number">02</span>
+                        <div class="trending-content">
+                            <h4>New Climate Deal Reaches Global Consensus</h4>
+                            <p>World leaders agree on ambitious environmental targets</p>
+                        </div>
+                    </article>
+                    <article class="trending-card">
+                        <span class="number">03</span>
+                        <div class="trending-content">
+                            <h4>Space Tourism Takes Major Leap Forward</h4>
+                            <p>Private sector achievements in space exploration</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="latest-news">
+                <div class="section-header">
+                    <h3>Latest Stories</h3>
+                    <a href="#" class="view-all">View All →</a>
+                </div>
+                <div class="news-grid">
+                    <article class="news-card">
+                        <img src="https://picsum.photos/400/300" alt="News story">
+                        <div class="news-card-content">
+                            <span class="category">Technology</span>
+                            <h4>AI Breakthrough Changes Medical Diagnosis</h4>
+                            <p>Revolutionary algorithm shows promising results in early detection of diseases...</p>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <img src="https://picsum.photos/401/300" alt="News story">
+                        <div class="news-card-content">
+                            <span class="category">Politics</span>
+                            <h4>Major Policy Reform Announced</h4>
+                            <p>New legislation set to transform healthcare system nationwide...</p>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <img src="https://picsum.photos/402/300" alt="News story">
+                        <div class="news-card-content">
+                            <span class="category">Business</span>
+                            <h4>Global Markets React to Economic Shift</h4>
+                            <p>Investors respond to unprecedented changes in financial landscape...</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <section class="multimedia">
+            <div class="section-header">
+                <h3>Featured Media</h3>
+            </div>
+            <div class="multimedia-grid">
+                <article class="media-card video">
+                    <div class="media-overlay">
+                        <i class="fas fa-play-circle"></i>
+                        <h4>Inside the New Space Race</h4>
+                        <span class="duration">15:24</span>
+                    </div>
+                </article>
+                <article class="media-card podcast">
+                    <div class="media-overlay">
+                        <i class="fas fa-microphone"></i>
+                        <h4>Weekly News Roundup</h4>
+                        <span class="duration">45 min</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About ThePad</h4>
+                <p>Delivering thought-provoking journalism that matters. We bring you stories that shape our world, with precision and integrity.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <a href="#">Latest News</a>
+                <a href="#">Politics</a>
+                <a href="#">Technology</a>
+                <a href="#">Business</a>
+                <a href="#">Culture</a>
+            </div>
+            <div class="footer-section">
+                <h4>Information</h4>
+                <a href="#">Subscribe</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 ThePad. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+    <script>
+        function calculateDailyTemp() {
+            const date = new Date();
+            const hour = date.getHours();
+        
+            // Base temperature pattern throughout the day
+            const baseTemp = 75;
+            const hourlyVariation = Math.sin((hour - 12) / 24 * Math.PI) * 8;
+        
+            // Add small random fluctuation
+            const randomVariation = Math.random() * 2 - 1;
+        
+            return Math.round(baseTemp + hourlyVariation + randomVariation);
+        }
+
+        function updateWeather() {
+            const temp = calculateDailyTemp();
+            const weatherText = document.getElementById('weather-text');
+            const weatherIcon = document.getElementById('weather-icon');
+        
+            weatherText.textContent = `${temp}°F Washington, DC`;
+        
+            // Dynamic icon based on time of day
+            const hour = new Date().getHours();
+            weatherIcon.className = (hour >= 6 && hour < 18) ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        // Update weather immediately and then every minute
+        updateWeather();
+        setInterval(updateWeather, 60000);
+    </script>

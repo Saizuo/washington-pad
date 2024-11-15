@@ -1,0 +1,175 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Business - The Washington Pad</title>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="css/business.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+      <header>
+          <div class="masthead">
+              <div class="logo-container">
+                  <h1 class="logo">The Washington<span> Pad</span></h1>
+              </div>
+              <div class="header-right">
+                  <div class="weather">
+                      <i class="fas fa-sun" id="weather-icon"></i>
+                      <span id="weather-text">Loading weather...</span>
+                  </div>
+                  <button class="subscribe-btn">Subscribe Now</button>
+              </div>
+          </div>
+          <nav>
+              <div class="nav-links">
+                  <a href="index.html">Home</a>
+                  <a href="politics.html">Politics</a>
+                  <a href="technology.html">Technology</a>
+                  <a href="business.html" class="active">Business</a>
+                  <a href="culture.html">Culture</a>
+                  <a href="opinion.html">Opinion</a>
+              </div>
+          </nav>
+      </header>
+
+      <main>
+          <div class="business-container">
+              <section class="market-ticker">
+                  <div class="ticker-wrapper">
+                      <div class="ticker-item">
+                          <span class="symbol">DOW</span>
+                          <span class="value">34,945.47</span>
+                          <span class="change positive">+1.2%</span>
+                      </div>
+                      <div class="ticker-item">
+                          <span class="symbol">NASDAQ</span>
+                          <span class="value">14,113.70</span>
+                          <span class="change positive">+0.8%</span>
+                      </div>
+                      <div class="ticker-item">
+                          <span class="symbol">S&P 500</span>
+                          <span class="value">4,567.80</span>
+                          <span class="change negative">-0.3%</span>
+                      </div>
+                  </div>
+              </section>
+
+              <section class="featured-business">
+                  <div class="main-story">
+                      <img src="https://picsum.photos/1200/600" alt="Business News">
+                      <div class="story-overlay">
+                          <span class="business-tag">Markets</span>
+                          <h1>Tech Giants Lead Market Rally Amid AI Boom</h1>
+                          <p>Wall Street sees record gains as artificial intelligence drives innovation</p>
+                      </div>
+                  </div>
+              </section>
+
+              <div class="business-grid">
+                  <section class="market-analysis">
+                      <h2>Market Analysis</h2>
+                      <div class="analysis-cards">
+                          <article class="analysis-card">
+                              <h3>Cryptocurrency Market Update</h3>
+                              <p>Bitcoin surges past $50,000 as institutional adoption grows</p>
+                              <div class="analyst">
+                                  <img src="https://picsum.photos/50/50" alt="Analyst">
+                                  <span>By Sarah Chen, Crypto Analyst</span>
+                              </div>
+                          </article>
+                          <article class="analysis-card">
+                              <h3>Global Markets Overview</h3>
+                              <p>Asian markets rally following US tech sector gains</p>
+                              <div class="analyst">
+                                  <img src="https://picsum.photos/51/51" alt="Analyst">
+                                  <span>By John Smith, Market Analyst</span>
+                              </div>
+                          </article>
+                      </div>
+                  </section>
+
+                  <aside class="business-sidebar">
+                      <div class="market-movers">
+                          <h3>Top Movers</h3>
+                          <div class="mover-item">
+                              <span class="stock">AAPL</span>
+                              <span class="price">$175.84</span>
+                              <span class="percent positive">+2.4%</span>
+                          </div>
+                          <div class="mover-item">
+                              <span class="stock">TSLA</span>
+                              <span class="price">$242.15</span>
+                              <span class="percent positive">+3.8%</span>
+                          </div>
+                          <div class="mover-item">
+                              <span class="stock">MSFT</span>
+                              <span class="price">$378.92</span>
+                              <span class="percent positive">+1.7%</span>
+                          </div>
+                      </div>
+                  </aside>
+              </div>
+          </div>
+      </main>
+
+      <footer>
+          <div class="footer-content">
+              <div class="footer-section">
+                  <h4>About ThePad</h4>
+                  <p>Your trusted source for business and financial news.</p>
+                  <div class="social-links">
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-facebook"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+              </div>
+              <div class="footer-section">
+                  <h4>Business Categories</h4>
+                  <a href="#">Markets</a>
+                  <a href="#">Economy</a>
+                  <a href="#">Companies</a>
+                  <a href="#">Technology</a>
+              </div>
+              <div class="footer-section">
+                  <h4>Subscribe</h4>
+                  <a href="#">Business Newsletter</a>
+                  <a href="#">Market Alerts</a>
+                  <a href="#">Premium Access</a>
+                  <a href="#">Research Reports</a>
+              </div>
+          </div>
+          <div class="footer-bottom">
+              <p>© 2024 ThePad. All rights reserved.</p>
+          </div>
+      </footer>
+
+      <script>
+          function calculateDailyTemp() {
+              const date = new Date();
+              const hour = date.getHours();
+              const baseTemp = 75;
+              const hourlyVariation = Math.sin((hour - 12) / 24 * Math.PI) * 8;
+              const randomVariation = Math.random() * 2 - 1;
+              return Math.round(baseTemp + hourlyVariation + randomVariation);
+          }
+
+          function updateWeather() {
+              const temp = calculateDailyTemp();
+              const weatherText = document.getElementById('weather-text');
+              const weatherIcon = document.getElementById('weather-icon');
+            
+              weatherText.textContent = `${temp}°F Washington, DC`;
+            
+              const hour = new Date().getHours();
+              weatherIcon.className = (hour >= 6 && hour < 18) ? 'fas fa-sun' : 'fas fa-moon';
+          }
+
+          updateWeather();
+          setInterval(updateWeather, 60000);
+      </script>
+  </body>
+  </html>

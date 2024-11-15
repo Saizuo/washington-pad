@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politics - The Washington Pad</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="masthead">
+            <div class="logo-container">
+                <h1 class="logo">The Washington<span> Pad</span></h1>
+            </div>
+            <div class="header-right">
+                <div class="weather">
+                    <i class="fas fa-sun" id="weather-icon"></i>
+                    <span id="weather-text">Loading weather...</span>
+                </div>
+                <button class="subscribe-btn">Subscribe Now</button>
+            </div>
+        </div>
+        <nav>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="politics.html" class="active">Politics</a>
+                <a href="technology.html">Technology</a>
+                <a href="business.html">Business</a>
+                <a href="culture.html">Culture</a>
+                <a href="opinion.html">Opinion</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="politics-grid">
+            <section class="featured-politics">
+                <article class="main-political-story">
+                    <img src="https://picsum.photos/800/500" alt="Senate Chamber">
+                    <div class="story-content">
+                        <span class="politics-tag">Capitol Hill</span>
+                        <h1>Senate Passes Historic Climate Bill with Bipartisan Support</h1>
+                        <p class="lead">Landmark legislation marks turning point in environmental policy</p>
+                        <div class="meta">
+                            <span class="author">By James Wilson</span>
+                            <span class="time">Updated 1 hour ago</span>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <div class="politics-sidebar">
+                <h3>Latest in Politics</h3>
+                <div class="politics-updates">
+                    <article class="update-card">
+                        <span class="time-tag">LIVE</span>
+                        <h4>Midterm Elections: Real-time Updates</h4>
+                        <p>Follow our live coverage of key races across the nation</p>
+                    </article>
+                    <article class="update-card">
+                        <span class="time-tag">10:45 AM</span>
+                        <h4>White House Announces New Economic Initiative</h4>
+                        <p>Plan aims to address inflation and supply chain issues</p>
+                    </article>
+                    <article class="update-card">
+                        <span class="time-tag">9:30 AM</span>
+                        <h4>State Department Briefing on International Relations</h4>
+                        <p>Key developments in diplomatic negotiations</p>
+                    </article>
+                </div>
+            </div>
+
+            <section class="policy-analysis">
+                <h2>Policy Deep Dives</h2>
+                <div class="analysis-grid">
+                    <article class="analysis-card">
+                        <img src="https://picsum.photos/401/300" alt="Policy Analysis">
+                        <div class="analysis-content">
+                            <h3>Healthcare Reform: What's Next?</h3>
+                            <p>Examining the future of healthcare policy and its implications</p>
+                            <span class="analyst">Analysis by Dr. Sarah Chen</span>
+                        </div>
+                    </article>
+                    <article class="analysis-card">
+                        <img src="https://picsum.photos/402/300" alt="Policy Analysis">
+                        <div class="analysis-content">
+                            <h3>Infrastructure Bill: State-by-State Impact</h3>
+                            <p>Breaking down how new legislation affects different regions</p>
+                            <span class="analyst">Analysis by Robert Martinez</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="political-commentary">
+                <h2>Expert Commentary</h2>
+                <div class="commentary-grid">
+                    <article class="commentary-card">
+                        <div class="expert-profile">
+                            <img src="https://picsum.photos/50/50" alt="Expert" class="profile-pic">
+                            <div class="expert-info">
+                                <h4>Prof. Michael Brown</h4>
+                                <span>Constitutional Law Expert</span>
+                            </div>
+                        </div>
+                        <p>"The recent Supreme Court decisions mark a significant shift in judicial interpretation..."</p>
+                    </article>
+                    <article class="commentary-card">
+                        <div class="expert-profile">
+                            <img src="https://picsum.photos/51/51" alt="Expert" class="profile-pic">
+                            <div class="expert-info">
+                                <h4>Dr. Lisa Wong</h4>
+                                <span>Policy Researcher</span>
+                            </div>
+                        </div>
+                        <p>"New voting legislation could fundamentally change electoral dynamics..."</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About ThePad</h4>
+                <p>Your trusted source for political news and analysis.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#">Election Coverage</a>
+                <a href="#">Policy Updates</a>
+                <a href="#">Congress Watch</a>
+                <a href="#">State Politics</a>
+            </div>
+            <div class="footer-section">
+                <h4>Subscribe</h4>
+                <a href="#">Newsletter</a>
+                <a href="#">Digital Access</a>
+                <a href="#">Print Edition</a>
+                <a href="#">Political Digest</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 ThePad. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function calculateDailyTemp() {
+            const date = new Date();
+            const hour = date.getHours();
+            const baseTemp = 75;
+            const hourlyVariation = Math.sin((hour - 12) / 24 * Math.PI) * 8;
+            const randomVariation = Math.random() * 2 - 1;
+            return Math.round(baseTemp + hourlyVariation + randomVariation);
+        }
+
+        function updateWeather() {
+            const temp = calculateDailyTemp();
+            const weatherText = document.getElementById('weather-text');
+            const weatherIcon = document.getElementById('weather-icon');
+            
+            weatherText.textContent = `${temp}°F Washington, DC`;
+            
+            const hour = new Date().getHours();
+            weatherIcon.className = (hour >= 6 && hour < 18) ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        updateWeather();
+        setInterval(updateWeather, 60000);
+    </script>
+</body>
+</html>

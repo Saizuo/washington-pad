@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Antelope "Buggy" Shot Dead - The Washington Pad</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="masthead">
+            <div class="logo-container">
+                <h1 class="logo">The Washington<span> Pad</span></h1>
+            </div>
+            <div class="header-right">
+                <div class="weather">
+                    <i class="fas fa-sun" id="weather-icon"></i>
+                    <span id="weather-text">Loading weather...</span>
+                </div>
+                <button class="subscribe-btn">Subscribe Now</button>
+            </div>
+        </div>
+        <nav>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="politics.html">Politics</a>
+                <a href="#">Technology</a>
+                <a href="#">Business</a>
+                <a href="#">Culture</a>
+                <a href="#">Opinion</a>
+            </div>
+        </nav>
+    </header>    
+    <main class="article-page">
+        <article class="full-story">
+            <header class="article-header">
+                <span class="category-tag">Local News</span>
+                <h1>6 Month Pet Antelope "Buggy" Shot Dead By Virginia Sheriff Office</h1>
+                <div class="article-meta">
+                    <span class="author">By John Smith</span>
+                    <span class="timestamp">Published: March 14, 2024 | Updated: 2 hours ago</span>
+                    <div class="share-buttons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <img src="home.png" alt="Buggy the antelope" class="hero-image">
+                <p class="lead">In a tragic turn of events, a beloved 6-month-old pet antelope named "Buggy" was fatally shot by Virginia Sheriff's deputies, sparking outrage among local residents and animal rights activists.</p>
+                
+                <p>The incident occurred early Thursday morning when deputies responded to calls about an "exotic animal" in the suburban area of Springfield. The antelope, which had been legally owned and raised by the Thompson family since it was a fawn, had accidentally escaped from their fenced backyard.</p>
+
+                <img src="image2.jpg" alt="Thompson family with Buggy" class="article-image">
+                
+                <p>"Buggy was like a member of our family," said Sarah Thompson, fighting back tears. "He was gentle, played with our children, and even had his own Instagram following. There was absolutely no reason for this level of force."</p>
+
+                <p>According to witnesses, Buggy was calmly grazing in a neighbor's garden when law enforcement arrived. Despite the family's desperate attempts to inform officers that the antelope was a domesticated pet, deputies made the decision to shoot, citing "public safety concerns."</p>
+
+                <img src="image3.jpg" alt="Memorial for Buggy" class="article-image">
+                
+                <p>The incident has sparked a heated debate about law enforcement protocols regarding exotic pets and the use of lethal force. Local animal rights organizations are calling for an investigation and reform in how such situations are handled.</p> 
+                <img src="image4.png" alt="Memorial for Buggy" class="article-image">               
+                <p>The Virginia Sheriff's Office has issued a statement defending their actions, stating that officers "followed standard protocol for potentially dangerous wildlife." However, many community members and experts disagree with this assessment.</p>
+
+                <div class="article-sidebar">
+                    <h3>Key Points</h3>
+                    <ul>
+                        <li>Buggy was a legally owned pet antelope</li>
+                        <li>The animal had no history of aggressive behavior</li>
+                        <li>Community protests have begun outside the Sheriff's office</li>
+                        <li>Local lawmakers are considering new legislation on exotic pet handling</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About ThePad</h4>
+                <p>Delivering thought-provoking journalism that matters. We bring you stories that shape our world, with precision and integrity.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <a href="#">Latest News</a>
+                <a href="#">Politics</a>
+                <a href="#">Technology</a>
+                <a href="#">Business</a>
+                <a href="#">Culture</a>
+            </div>
+            <div class="footer-section">
+                <h4>Information</h4>
+                <a href="#">Subscribe</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 ThePad. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function calculateDailyTemp() {
+            const date = new Date();
+            const hour = date.getHours();
+            const baseTemp = 75;
+            const hourlyVariation = Math.sin((hour - 12) / 24 * Math.PI) * 8;
+            const randomVariation = Math.random() * 2 - 1;
+            return Math.round(baseTemp + hourlyVariation + randomVariation);
+        }
+
+        function updateWeather() {
+            const temp = calculateDailyTemp();
+            const weatherText = document.getElementById('weather-text');
+            const weatherIcon = document.getElementById('weather-icon');
+            weatherText.textContent = `${temp}°F Washington, DC`;
+            const hour = new Date().getHours();
+            weatherIcon.className = (hour >= 6 && hour < 18) ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        updateWeather();
+        setInterval(updateWeather, 60000);
+    </script>
+</body>
+</html>
