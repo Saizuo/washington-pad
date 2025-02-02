@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barron Trump's Nickname "Bonny" Revealed - The Washington Pad</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="masthead">
+            <div class="logo-container">
+                <h1 class="logo">The Washington<span> Pad</span></h1>
+            </div>
+            <div class="header-right">
+                <div class="weather">
+                    <i class="fas fa-sun" id="weather-icon"></i>
+                    <span id="weather-text">Loading weather...</span>
+                </div>
+                <button class="subscribe-btn">Subscribe Now</button>
+            </div>
+        </div>
+        <nav>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="politics.html">Politics</a>
+                <a href="technology.html">Technology</a>
+                <a href="business.html">Business</a>
+                <a href="culture.html">Culture</a>
+                <a href="opinion.html">Opinion</a>
+            </div>
+        </nav>
+    </header>    
+    <main class="article-page">
+        <article class="full-story">
+            <header class="article-header">
+                <span class="category-tag">POLITICS</span>
+                            <header class="article-header">
+                <h1>Barron Trump's Nickname "Bonny" Revealed</h1>
+                <div class="article-meta">
+                    <span class="author">By Michael Anderson</span>
+                    <span class="timestamp">Published: Feb 3, 2025 | Updated: Recent</span>
+                    <div class="share-buttons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+</header>
+<div class="article-content">
+                <img src="https://wwd.com/wp-content/uploads/2025/01/barron-trump-inauguration.jpg?w=1000&h=563&crop=1" alt="Barron Trump at Recent Public Event" class="hero-image">
+                <p class="lead">In an unexpected revelation, sources close to the Trump family have disclosed that Barron Trump, the former first son, goes by the endearing nickname "Bonny" among family and close friends.</p>
+
+                <p>The 18-year-old son of former President Donald Trump has largely maintained a private life, but this intimate detail offers a rare glimpse into the personal dynamics of the Trump household.</p>
+
+                <p>"The nickname 'Bonny' has been used since his early childhood," revealed a family insider. "It's a term of endearment that particularly resonates with his mother Melania's European heritage."</p>
+
+                <p>Standing at an impressive 6'7", Barron Trump has grown significantly since his White House days, yet the diminutive nickname has stuck, creating an endearing contrast to his towering presence.</p>
+
+                <img src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/1779/production/_133290060_406d9ae89fea643f145bc7e5b13eb6af908233eb2636_665_3300_18561000x563.jpg.webp" alt="Trump Family at Recent Gathering" class="article-image">
+
+                <div class="impact-analysis">
+                    <h3>Quick Facts About Barron "Bonny" Trump</h3>
+                    <ul>
+                        <li>Currently attending a prestigious university</li>
+                        <li>Fluent in both English and Slovenian</li>
+                        <li>Passionate about sports and technology</li>
+                        <li>Maintains a private social media presence</li>
+                    </ul>
+                </div>
+
+                <p>The revelation comes as Barron begins to make more public appearances alongside his family, though still maintaining the private nature that has characterized his upbringing.</p>
+
+                <div class="article-sidebar">
+                    <h3>Key Points</h3>
+                    <ul>
+                        <li>Nickname "Bonny" revealed after years of privacy</li>
+                        <li>Origins traced to early childhood</li>
+                        <li>Reflects close family dynamics</li>
+                        <li>Maintains low public profile despite revelation</li>
+                        <li>Family tradition of personal nicknames continues</li>
+                    </ul>
+                </div>
+</div>
+            </header>
+      </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About ThePad</h4>
+                <p>Delivering thought-provoking journalism that matters. We bring you stories that shape our world, with precision and integrity.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <a href="#">Latest News</a>
+                <a href="#">Politics</a>
+                <a href="#">Technology</a>
+                <a href="#">Business</a>
+                <a href="#">Culture</a>
+            </div>
+            <div class="footer-section">
+                <h4>Information</h4>
+                <a href="#">Subscribe</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025ThePad. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function calculateDailyTemp() {
+            const date = new Date();
+            const hour = date.getHours();
+            const baseTemp = 75;
+            const hourlyVariation = Math.sin((hour - 12) / 24 * Math.PI) * 8;
+            const randomVariation = Math.random() * 2 - 1;
+            return Math.round(baseTemp + hourlyVariation + randomVariation);
+        }
+
+        function updateWeather() {
+            const temp = calculateDailyTemp();
+            const weatherText = document.getElementById('weather-text');
+            const weatherIcon = document.getElementById('weather-icon');
+            weatherText.textContent = `${temp}°F Washington, DC`;
+            const hour = new Date().getHours();
+            weatherIcon.className = (hour >= 6 && hour < 18) ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        updateWeather();
+        setInterval(updateWeather, 60000);
+    </script>
+</body>
+</html>
+
